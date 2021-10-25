@@ -1,11 +1,16 @@
-import { content } from './UseTabs';
+import { content, useTabs } from './UseTabs';
 
 function App() {
+  const { curItem, changeItem } = useTabs(0, content);
+
   return (
     <div>
       {content.map((section, i) => (
-        <button key={i}>{section.tab}</button>
+        <button onClick={() => changeItem(i)} key={i}>
+          {section.tab}
+        </button>
       ))}
+      <div>{curItem.content}</div>
     </div>
   );
 }
