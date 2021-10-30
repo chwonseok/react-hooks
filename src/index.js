@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 // import UseStateApp from './UseStateApp';
-import UseEffectApp from './UseEffectApp';
+import UseEffectApps from './UseEffectApps';
 
 ReactDOM.render(
   <React.StrictMode>
     {/* <UseStateApp /> */}
-    <UseEffectApp />
+    <UseEffectApps />
   </React.StrictMode>,
   document.getElementById('root')
 );

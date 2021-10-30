@@ -1,5 +1,25 @@
-import { useEffect, useState } from 'react';
+import { useRef } from 'react';
+import { useEffect } from 'react/cjs/react.development';
 
+const useClick = (onClick) => {
+  const element = useRef();
+  useEffect(() => {
+    if (element.current) element.current.addEventListener('click', onClick);
+  });
+  return element;
+};
+
+export default function UseEffectApps() {
+  const sayHello = () => console.log('Hello');
+  const title = useClick(sayHello);
+  return (
+    <div>
+      <h1 ref={title}>Hi</h1>
+    </div>
+  );
+}
+
+/* 1. useTitle
 const useTitle = (initialTitle) => {
   const [title, setTitle] = useState(initialTitle);
   const updateTitle = () => {
@@ -12,7 +32,7 @@ const useTitle = (initialTitle) => {
   return setTitle;
 };
 
-export default function UseEffectApp() {
+export default function UseEffectApps() {
   const titleUpdater = useTitle('Loading...');
   setTimeout(() => titleUpdater('Home'), 3000);
   return (
@@ -20,10 +40,10 @@ export default function UseEffectApp() {
       <div>Hey</div>
     </div>
   );
-}
+} */
 
 /* useEffect에 대한 기본
-  export default function UseEffectApp() {
+  export default function UseEffectApps() {
   const [number, setNumber] = useState(0);
   const [aNumber, setANumber] = useState(0);
 
