@@ -4,6 +4,6 @@ This is to practice react hooks
 
 # Source of Practice
 
-Nomad Coders
+1. Nomad Coders
 
-Video on Youtube: [PedroTech](https://www.youtube.com/watch?v=LlvBzyy-558)
+2. Video on Youtube: [PedroTech](https://www.youtube.com/watch?v=LlvBzyy-558)
