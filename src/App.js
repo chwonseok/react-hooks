@@ -4,7 +4,7 @@
 // import UseLayoutEffect from './PedroTech/UseLayoutEffect';
 // import UseImperativeHandle from './PedroTech/UseImperativeHandle';
 
-import UseContext from './PedroTech/UseContext';
+import UseContext from './PedroTech/UseContextParent';
 
 const App = () => {
   return (
