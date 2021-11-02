@@ -1,12 +1,12 @@
 # React Hooks
 
-This is to practice react hooks
+This is to learn React hooks
 
 # Source of Practice
 
 1. Nomad Coders
 
-2. Video on Youtube: [PedroTech](https://www.youtube.com/watch?v=LlvBzyy-558)
+2. Youtube video: [PedroTech](https://www.youtube.com/watch?v=LlvBzyy-558)
 
 # What hooks did I study?
 
@@ -19,3 +19,9 @@ This is to practice react hooks
 7. useContext()
 8. useMemo()
 9. useCallback()
+
+# My note
+
+- My note on this lecture, [here](https://chwonseok.notion.site/Hooks-973b7c813eb840b2915ceb7cb0380939)
+
+- This note will be updated occasionally as my study goes on
