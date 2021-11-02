@@ -3,8 +3,8 @@
 // import UseRef from './PedroTech/UseRef';
 // import UseLayoutEffect from './PedroTech/UseLayoutEffect';
 // import UseImperativeHandle from './PedroTech/UseImperativeHandle';
-
-import UseContext from './PedroTech/UseContextParent';
+// import UseContext from './PedroTech/UseContextParent';
+import UseMemo from './PedroTech/UseMemo';
 
 const App = () => {
   return (
@@ -14,7 +14,8 @@ const App = () => {
       {/* <UseRef /> */}
       {/* <UseLayoutEffect /> */}
       {/* <UseImperativeHandle /> */}
-      <UseContext />
+      {/* <UseContext /> */}
+      <UseMemo />
     </div>
   );
 };
