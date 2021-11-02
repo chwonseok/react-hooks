@@ -1,7 +1,14 @@
-import { useState } from 'react';
+import { forwardRef, useImperativeHandle, useRef, useState } from 'react';
 
-export function ButtonChild() {
+const ButtonChild = forwardRef((props, ref) => {
   const [toggle, setToggle] = useState(false);
+
+  useImperativeHandle(ref, () => ({
+    alterToggle() {
+      setToggle(!toggle);
+    },
+  }));
+
   return (
     <div>
       <button
@@ -14,15 +21,24 @@ export function ButtonChild() {
       {toggle && <span>Toggle</span>}
     </div>
   );
-}
+});
 
-const UseImperativeHandle = () => {
+// Parent Component
+const ButtonParent = () => {
+  const buttonRef = useRef(null);
+
   return (
     <>
-      <button>Button From Parent</button>
-      <ButtonChild />
+      <button
+        onClick={() => {
+          buttonRef.current.alterToggle();
+        }}
+      >
+        Button From Parent
+      </button>
+      <ButtonChild ref={buttonRef} />
     </>
   );
 };
 
-export default UseImperativeHandle;
+export default ButtonParent;
